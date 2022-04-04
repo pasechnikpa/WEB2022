@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .block{
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+        .block1{
+            margin: 50px;
+        }
+        .block2{
+            margin: 50px 10px;
+        }
+        .block3{
+            margin: 50px 10px 5px;
+        }
+        .block4{
+            margin: 50px 10px 5px 100px;
+        }
+        .block5{
+            padding: 50px;
+        }
+        .block6{
+            padding: 50px 10px;
+        }
+        .block7{
+            padding: 50px 10px 5px;
+        }
+        .block8{
+            padding: 50px 10px 5px 100px;
+            background: goldenrod;
+            margin: 10px;
+        }
+        .block9-1, .block10-1{
+            background: RED;;
+        }
+        .block9-1{
+            margin: 10px; /* ПЛОХО, см вар ниже*/
+        }
+        .block10{
+            padding: 10px; 
+        }
+        .block11{
+            width: 300px;
+        }
+    
+        .block12{
+            height: 50px;
+        }
+        .block13{
+            width: 300px;
+            height: 50px;
+            overflow: auto;
+        }
+        .block14{
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        .block15{
+            width: 300px;
+            height: 50px;
+        }
+        
+        .block16{
+            border: 5px solid salmon ;
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+        }
+        
+        .block17{
+            border: 5px solid salmon ;
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .block18{
+            max-width: 500px;
+        }
+        .block19{
+            min-width: 300px;
+        }
+        .block20{
+            min-height: 20px; /* ВМЕСТО height */
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 2px;
+            margin-right: 10px;
+        }
+        .block21{
+            border: 5px solid salmon ;
+        }
+        .block22{
+            color: red;
+            border: solid;
+        }
+        .block23{
+            border: 2px dotted blue;
+        }
+        .block24{
+            border: 2px dashed blue;
+        }
+        .block25{
+            border: 2px double blue;
+        }
+        .block26{
+            border: 10px inset blue;
+        }
+        .block27{
+            border: 10px outset blue;
+        }
+        .block28{
+            border: 5px solid black;
+            border-left: 10px solid black;
+        }
+        .block29{
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            border-left-width: 10px;
+        }
+        .block30{
+            border: 10px solid black;
+            border-radius: 10px;
+        }
+        .block31{
+            border: 10px solid black;
+            border-radius: 50px;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+        }
+        .block32{
+            border: 10px solid black;
+            border-radius: 10px 20px;
+        }
+        .block33{
+            border: 10px solid black;
+            border-radius: 10px 20px 30px;
+        }
+        .block34{
+            border: 10px solid black;
+            border-radius: 10px 20px 30px 40px;
+        }
+        .block35{
+            border: 10px solid black;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 40px;
+        }
+        .block36{
+            border: 10px solid black;
+            border-top-left-radius: 10px 20px;
+            border-bottom-right-radius: 40px 10px;
+        }
+        .block37{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+        }
+        .block38{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            /* background-position-x: 10px;
+            background-position-y: 20px; */
+        }
+        .block39{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            background-repeat: no-repeat;
+        }
+        
+        .block40{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            background-repeat: repeat-y; /* repeat-x */
+        }
+        .block41{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            background-repeat: no-repeat;
+            background-size: 60px 100px;
+        }
+        .block42{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            background-repeat: no-repeat;
+            background-size: 60px;
+        }
+        .block43{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-position: 10px 20px;
+            background-repeat: no-repeat;
+            background-size: auto 60px;
+        }
+        .block44{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-size: cover;
+        }
+        .block45{
+            min-height: 300px;
+            background-image: url('some_image.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .block46{
+            min-height: 300px;
+            background-color: aqua;
+            background-image: url('some_image.jpg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .block47{
+            min-height: 300px;
+            background-color: aqua;
+            background-image: url('some_image.jpg'), url('some_image.jpg');
+            background-size: 30%, 10%;
+            background-repeat: no-repeat;
+            background-position: center, bottom right;
+        }
+        
+        .block47{
+            min-height: 300px;
+            /* background-color: aqua;
+            background-image: url('some_image.jpg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center; */
+            background: aqua url('some_image.jpg') no-repeat center;
+            background-size: 30%;
+        }
+        .block48{
+            background-image: linear-gradient(red, green);
+            min-height: 300px;
+        }
+        .block49{
+            aspect-ratio: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nostrum omnis expedita? Iste ipsa, repellat enim, maxime perferendis aliquid in cumque mollitia perspiciatis excepturi, atque tenetur eius nulla? Necessitatibus, neque!</div>
+    <div class="block block1">1</div>
+    <div class="block block2">2</div>
+    <div class="block block3">3</div>
+    <div class="block block4">4</div>
+    <div class="block block5">5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellat, eligendi repellendus perspiciatis nesciunt consectetur inventore voluptas laboriosam. Ad id dignissimos ducimus doloribus aut animi modi maiores autem architecto suscipit?</div>
+    <div class="block block6">6  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellat, eligendi repellendus perspiciatis nesciunt consectetur inventore voluptas laboriosam. Ad id dignissimos ducimus doloribus aut animi modi maiores autem architecto suscipit?</div>
+    <div class="block block7">7  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellat, eligendi repellendus perspiciatis nesciunt consectetur inventore voluptas laboriosam. Ad id dignissimos ducimus doloribus aut animi modi maiores autem architecto suscipit?</div>
+    <div class="block block8">8  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas repellat, eligendi repellendus perspiciatis nesciunt consectetur inventore voluptas laboriosam. Ad id dignissimos ducimus doloribus aut animi modi maiores autem architecto suscipit?</div>
+    <div class="block block9">
+        <div class="block9-1">
+            9
+        </div>
+    </div>
+    <div class="block block10">
+        <div class="block10-1">
+            10
+        </div>
+    </div>
+    <div class="block block11">11</div>
+    <div class="block block12">12</div>
+    <div class="block block13">13 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore minima culpa vel, voluptates voluptatum voluptatem recusandae! Ullam, qui. Explicabo deserunt tenetur nihil minima voluptatibus dolores consectetur iste sit, soluta autem?</div>
+    <div class="block block14">14</div>
+    <div class="block block15">15</div>
+    <div class="block block16">16</div>
+    <div class="block block17">17</div>
+    <div class="block block18">18</div>
+    <div class="block block19">19</div>
+    <div class="block block20">20 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempora itaque aut quos odio cumque mollitia, minima deleniti similique hic nobis ad magni nam consectetur provident reiciendis consequuntur molestias! Quas?</div>
+    <div class="block block21">21</div>
+    <div class="block block22">22</div>
+    <div class="block block23">23</div>
+    <div class="block block24">24</div>
+    <div class="block block25">25</div>
+    <div class="block block26">26</div>
+    <div class="block block27">27</div>
+    <div class="block block28">28</div>
+    <div class="block block29">29</div>
+    <div class="block block30">30</div>
+    <div class="block block31">31</div>
+    <div class="block block32">32</div>
+    <div class="block block33">33</div>
+    <div class="block block34">34</div>
+    <div class="block block35">35</div>
+    <div class="block block36">36</div>
+    <div class="block block37">37</div>
+    <div class="block block38">38</div>
+    <div class="block block39">39</div>
+    <div class="block block40">40</div>
+    <div class="block block41">41</div>
+    <div class="block block42">42</div>
+    <div class="block block43">43</div>
+    <div class="block block44">44</div>
+    <div class="block block45">45</div>
+    <div class="block block46">46</div>
+    <div class="block block47">47</div>
+    <div class="block block48">48</div>
+    <div class="block block49">49</div>
+    <div class="block block50">50</div>
+</body>
+</html>

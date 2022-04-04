@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .containter{
+            border: 1px solid red;
+        }
+        .block{
+            border: 1px solid; 
+        }
+        .container1{
+            display: flex;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+        }
+        .container3{
+            display: flex;
+            justify-content: space-around;
+        }
+        .container4{
+            display: flex;
+        }
+        /* Для всех .block в .container4 */
+        .container4 .block{
+            flex-grow: 1;
+        }
+        .container5{
+            display: flex;
+        }
+        .container5 .block{
+            width: 200px;
+        }
+        
+        .container6{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container6 .block{
+            width: 200px;
+        }
+        
+        .container7{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container7 .block{
+            width: 200px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="containter container1">
+        <div class="block block1">1.1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+    </div>
+    <div class="containter container2">
+        <div class="block block1">2.1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+    </div>
+    <div class="containter container3">
+        <div class="block block1">3.1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+    </div>
+    <div class="containter container4">
+        <div class="block block1">4.1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+    </div>
+    <div class="containter container5">
+        <div class="block block1">5.1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque, tempora praesentium dolorem, incidunt architecto modi, ipsum porro dicta minima mollitia amet sunt? Quae molestias consectetur porro omnis officia adipisci!</div>
+        <div class="block block2">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, id vel? Sequi hic maxime quisquam non enim repellat consequatur blanditiis soluta laboriosam, quaerat voluptates. Minima voluptates natus quisquam odit perspiciatis.</div>
+        <div class="block block3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime distinctio, dolorem dolore veritatis architecto iure vitae nam possimus eveniet similique harum voluptatibus minima animi deserunt tempora minus fuga reiciendis laudantium?</div>
+        <div class="block block4">4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quam aut reprehenderit ab, nisi nulla! Cum excepturi similique ullam dolorem illum! Nam, accusantium voluptas amet cum alias sequi necessitatibus nostrum!</div>
+        <div class="block block5">5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam excepturi nisi sed deleniti, provident veniam quasi maxime fuga non quia corrupti corporis laborum. Ab est maiores vero amet a asperiores.</div>
+    </div>
+    
+    <div class="containter container6">
+        <div class="block block1">6.1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque, tempora praesentium dolorem, incidunt architecto modi, ipsum porro dicta minima mollitia amet sunt? Quae molestias consectetur porro omnis officia adipisci!</div>
+        <div class="block block2">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, id vel? Sequi hic maxime quisquam non enim repellat consequatur blanditiis soluta laboriosam, quaerat voluptates. Minima voluptates natus quisquam odit perspiciatis.</div>
+        <div class="block block3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime distinctio, dolorem dolore veritatis architecto iure vitae nam possimus eveniet similique harum voluptatibus minima animi deserunt tempora minus fuga reiciendis laudantium?</div>
+        <div class="block block4">4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quam aut reprehenderit ab, nisi nulla! Cum excepturi similique ullam dolorem illum! Nam, accusantium voluptas amet cum alias sequi necessitatibus nostrum!</div>
+        <div class="block block5">5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam excepturi nisi sed deleniti, provident veniam quasi maxime fuga non quia corrupti corporis laborum. Ab est maiores vero amet a asperiores.</div>
+    </div>
+    
+    <div class="containter container7">
+        <div class="block block1">7.1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet atque, tempora praesentium dolorem, incidunt architecto modi, ipsum porro dicta minima mollitia amet sunt? Quae molestias consectetur porro omnis officia adipisci!</div>
+        <div class="block block2">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, id vel? Sequi hic maxime quisquam non enim repellat consequatur blanditiis soluta laboriosam, quaerat voluptates. Minima voluptates natus quisquam odit perspiciatis.</div>
+        <div class="block block3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime distinctio, dolorem dolore veritatis architecto iure vitae nam possimus eveniet similique harum voluptatibus minima animi deserunt tempora minus fuga reiciendis laudantium?</div>
+        <div class="block block4">4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quam aut reprehenderit ab, nisi nulla! Cum excepturi similique ullam dolorem illum! Nam, accusantium voluptas amet cum alias sequi necessitatibus nostrum!</div>
+        <div class="block block5">5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam excepturi nisi sed deleniti, provident veniam quasi maxime fuga non quia corrupti corporis laborum. Ab est maiores vero amet a asperiores.</div>
+    </div>
+    <div class="containter container8">
+        <div class="block block1">1</div>
+        <div class="block block2">2</div>
+        <div class="block block3">3</div>
+        <div class="block block4">4</div>
+        <div class="block block5">5</div>
+    </div>
+</body>
+</html>
