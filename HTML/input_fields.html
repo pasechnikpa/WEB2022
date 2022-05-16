@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поля ввода</title>
+    <style>
+        .test{color:red;}
+        input{
+            color: green;
+            border: 1px solid green;
+            outline: none;
+        }
+        .test2::placeholder{
+            color: blue;
+        }
+        .btn:hover{
+            color: red;
+        }
+        input:checked{
+            opacity: 0.5;
+        }
+        #chk1{
+            display: none;
+        }
+        #chk1 + label{
+            display: block;
+            color: gray;
+            border: 1px solid gray;
+            padding: 5px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        #chk1:checked + label{
+            color: green;
+            border: 1px solid green;
+        }
+        input:focus{
+            color: red;
+            border-color: red;
+        }
+        input:required{
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <label class="test" for="chk1">Чекбокс </label>
+    <form method="get">
+        <label for="fio">ФИО </label>
+        <input type="text" name="fio" value="Пасечник Павел" id="fio"/>
+        <input class="test2" type="text" placeholder="Пасечник Павел"/>
+        <input type="password" name="password" required/>
+        <input type="color" value="#ff00ff" required/>
+        <input type="date" value="2018-07-22"/>
+        <input type="datetime-local" />
+        <input type="time"/>
+        <input type="range" min="1" max="10" step="1" value="1"/>
+        <input type="number"/>
+        <input type="email"/>
+        <input type="submit" value="Отправить данные на сервер"/>
+        <input type="button" class="btn" value="button"/>
+        <div>
+            <input type="checkbox" id="chk1"/>
+            <label for="chk1">Чекбокс </label>
+        </div>
+        <div>
+            <label for="r1">Радиокнопка 1 </label>
+            <input type="radio" id="r1" name="r"/>
+            <label for="r2">Радиокнопка 2 </label>
+            <input type="radio" id="r2" name="r"/>
+            <label for="r3">Радиокнопка 3 </label>
+            <input type="radio" id="r3" name="r"/>
+        </div>
+        <input type="hidden" value="12345" />
+        <input type="file" multiple />
+        <input type="image" src="https://mdn.mozillademos.org/files/2917/fxlogo.png" width="20"/>
+        <textarea name="text" placeholder="123213" rows="2" cols="4"></textarea>
+        <select name="select" size="1">
+            <option value="1">Пункт 1</option>
+            <option value="2" selected>Пункт 2</option>
+            <option value="223">Пункт 3</option>
+            <option value="4">Пункт 4</option>
+        </select>
+        <select name="select2" multiple size="3">
+            <option value="1" selected>Пункт 1</option>
+            <option value="2" selected>Пункт 2</option>
+            <option value="223">Пункт 3</option>
+            <option value="4">Пункт 4</option>
+        </select>
+    </form>
+</body>
+</html>
